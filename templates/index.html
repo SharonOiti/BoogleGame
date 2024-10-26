@@ -8,15 +8,15 @@
 </head>
 <body>
     <h1>Boggle Game</h1>
-    <div id="board">
+    <table id="board">
         {% for row in board %}
-            <div class="row">
+            <tr>
                 {% for letter in row %}
-                    <div class="cell">{{ letter }}</div>
+                    <td class="cell">{{ letter }}</td>
                 {% endfor %}
-            </div>
+            </tr>
         {% endfor %}
-    </div>
+    </table>
     <form id="guess-form">
         <input type="text" id="guess" required>
         <button type="submit">Submit Guess</button>
@@ -27,4 +27,4 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
-</html>
+</html> 
